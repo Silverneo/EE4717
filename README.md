@@ -1,9 +1,16 @@
 EE4717
 ======
 
-EE4717 Web Application Design Project
+###EE4717 Web Application Design Project
 
-Team Member:
+####Team Member:
 
-        - Zhang Chunmeng
-        - Cai Yitong
+- Zhang Chunmeng
+- Cai Yitong
+
+####Project Selected:
+
+- Project 5 A web portal for booking sports facilities
+
+####Project Title:
+- To be confirmed
