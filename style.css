@@ -1,9 +1,11 @@
 * {
 	margin: 0;
+	padding: 0;
 }
 body {
 	background-color: #eee6d9;
 	text-align: center;
+	font-family: Helvetica, Arial, sans-serif;
 }
 #container {
 	text-align: left;
@@ -13,29 +15,37 @@ body {
 }
 header {
 	background-color: #97708A;
+	padding: 5px 5px 5px 5px;
 }
 
 ul {
 	list-style: none;
 }
-
 #top-nav {  
 	position: absolute;
 	right: 10px;
 	top: 5px;
 }
 
-#top-nav a {text-decoration: none;}
 #top-nav li {display: inline;}
 
-nav {
-	background-color: #AB6361;
-	float: right;
-}
-nav a {
+#top-nav li a {
 	text-decoration: none;
 }
-nav li {
+
+nav {
+	background-color: #EEEEEE;
+}
+
+nav ul {
+	float: right;
+}
+nav ul li {
 	float: left;
 	padding: 5px 15px 5px 15px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: black;
 }
