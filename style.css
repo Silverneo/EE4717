@@ -3,19 +3,24 @@
 	padding: 0;
 }
 body {
-	background-color: #eee6d9;
+	background-color: #ecf0f1;
 	text-align: center;
 	font-family: Helvetica, Arial, sans-serif;
 }
 #container {
 	text-align: left;
 	margin: 0 auto;
-	width: 1200px;
+	width: 1100px;
 	position: relative;
 }
 header {
-	background-color: #97708A;
-	padding: 5px 5px 5px 5px;
+	display: block;
+	background-color: #1abc9c;
+	position: fixed;
+	top: 0;
+	height: 100px;
+	width: 1100px;
+	z-index: 100;
 }
 
 ul {
@@ -25,12 +30,14 @@ ul {
 	position: absolute;
 	right: 10px;
 	top: 5px;
+	font-size: 90%;
 }
 
 #top-nav li {display: inline;}
 
 #top-nav li a {
 	text-decoration: none;
+	color: black;
 }
 
 nav ul {
@@ -47,4 +54,8 @@ nav ul li a {
 }
 .clear {
     clear: both;
+}
+
+#content {
+	margin-top: 100px;
 }
