@@ -3,9 +3,14 @@
 }
 body {
 	background-color: #eee6d9;
-	text
+	text-align: center;
 }
-
+#container {
+	text-align: left;
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+}
 header {
 	background-color: #97708A;
 }
