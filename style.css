@@ -64,15 +64,13 @@ nav ul li a:hover {
     clear: both;
 }
 
-#content {
+.container {
 	margin-top: 80px;
 }
 
 #intro-photo{
-	height: 800px;
-	background: url(images/intro.jpg);
-	background-size: 100%;
-	background-repeat: no-repeat;
+	width: 100%;
+	height: auto;
 }
 
 footer {
