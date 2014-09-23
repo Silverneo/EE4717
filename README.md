@@ -11,4 +11,4 @@ EE4717 Web Application Design Project
 - Project 5 A web portal for booking sports facilities
 
 ####Project Title:
-- To be confirmed
+- Fit-Tastic!
