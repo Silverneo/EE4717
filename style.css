@@ -16,7 +16,8 @@ ul {
 }
 header {
 	display: block;
-	background-color: #4183D7;
+	background-color: #74AFAD;
+	color: #FFFFFF;
 	position: fixed;
 	top: 0;
 	height: 80px;
@@ -35,8 +36,14 @@ header {
 
 #top-nav li a {
 	text-decoration: none;
-	color: black;
+	color: #FFFFFF;
 }
+
+#main-nav {
+	font-family: Gotham;
+	color: #FFFFFF;
+}
+	
 #title-box {
 	height: 50%;
 }
@@ -66,6 +73,13 @@ nav ul li a:hover {
 
 .container {
 	margin-top: 80px;
+	background-color: #74AFAD;
+	color: #FFFFFF;
+}
+
+.signupbtn{
+	background-image: url(../images/signup.jpg) no-repeat;
+	
 }
 
 #intro-photo{
@@ -76,13 +90,14 @@ nav ul li a:hover {
 footer {
 	font-size: 90%;
 	display: block;
-	background-color: #4183D7;
+	background-color: #74AFAD;
 }
 footer ul {
 	float: right;
 }
 .section-box {
 	text-align: center;
+	background-color: #ECECEA;
 }
 .section-box section{
 	display: block;
@@ -99,4 +114,22 @@ footer ul li {
 
 #footer-social {
 	margin-top: 20px;
+}
+
+#social-logo{
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+
+    -webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	
+	width: 40px;
+	height:40px;
+}
+
+#social-logo:hover {
+	position: relative;
+	top: -5px;
 }
