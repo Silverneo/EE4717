@@ -7,60 +7,53 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
 }
-ul {
-	list-style: none;
-}
 header {
-	display: block;
 	background-color: #74AFAD;
 	color: #FFFFFF;
 	position: fixed;
 	top: 0;
-	height: 80px;
+	height: 60px;
 	width: 100%;
 	z-index: 5;
 }
-
-#top-nav {  
-	position: absolute;
-	right: 30px;
-	top: 5px;
-	font-size: 90%;
+#logo-box {
+	height: 0px;
+	width: 180px;
+	margin: 0 auto;
+}
+#logo {
+	padding-top: 11px;
 }
 
-#top-nav li {display: inline;}
-
-#top-nav li a {
-	text-decoration: none;
-	color: #FFFFFF;
-}
-
-#main-nav {
+nav {
 	font-family: Gotham;
 	color: #FFFFFF;
+	height: 30px;
+	margin: 15px;
 }
-	
-#title-box {
-	height: 50%;
+nav ul.nav-left {
+	float: left;
+	list-style: none;
 }
-nav {
-	height: 50%;
-}
-nav ul {
+
+nav ul.nav-right {
 	float: right;
-	padding-right: 15px;
+	list-style: none;
 }
 nav ul li {
 	float: left;
+	height: 30px;
+	line-height: 30px;
 }
 
 nav ul li a {
 	text-decoration: none;
-	color: black;
+	color: white;
 	padding: 5px 15px 5px 15px;
 }
 
 nav ul li a:hover {
+	color: black;
 	background-color: white;
 }
 .clear {
@@ -68,7 +61,7 @@ nav ul li a:hover {
 }
 
 .container {
-	margin-top: 80px;
+	margin-top: 60px;
 	background-color: #FFFFFF;
 	text-align: center;
 	margin-left: auto;
@@ -123,14 +116,6 @@ nav ul li a:hover {
 	border-radius: 4px;
 }
 
-footer {
-	font-size: 90%;
-	display: block;
-	background-color: #74AFAD;
-}
-footer ul {
-	float: right;
-}
 .section-box {
 	text-align: center;
 	background-color: #ECECEA;
@@ -143,13 +128,23 @@ footer ul {
 	border: solid;
 	margin: 4px 4px;
 }
+
+footer {
+	font-size: 90%;
+	display: block;
+	background-color: #74AFAD;
+	height: 80px;
+}
+footer ul {
+	float: right;
+}
 footer ul li {
 	float: left;
 	padding: 5px 30px 5px 0px;
 }
 
 #footer-social {
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 #social-logo{
@@ -161,8 +156,8 @@ footer ul li {
 	-moz-border-radius: 6px;
 	border-radius: 6px;
 	
-	width: 40px;
-	height:40px;
+	width: 30px;
+	height:30px;
 }
 
 #social-logo:hover {
