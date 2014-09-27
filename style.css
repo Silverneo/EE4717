@@ -6,6 +6,7 @@ body {
 	text-align: center;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
+	background-color: #ECECEA;
 }
 header {
 	background-color: #74AFAD;
@@ -62,7 +63,6 @@ nav ul li a:hover {
 
 .container {
 	margin-top: 60px;
-	background-color: #FFFFFF;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -77,9 +77,8 @@ nav ul li a:hover {
 	display: inline-block;
 	margin: 50px auto;
 	max-width: 600px;
-	background: #FFFFFF;
 	padding: 25px;
-	border: 1px solid #E4E4E4;
+	border: 1px solid #D9853B;
 	font-size: 120%;
 }
 
@@ -101,31 +100,33 @@ nav ul li a:hover {
 	float: left;
 	text-align: right;
 	padding-right: 20px;
+	height: 30px;
+	line-height: 30px;
 }
 
-#try-us input[type="text"], #try-us input[type="email"], #try-us input[type="password"]{
+#try-us input[type=text], #try-us input[type=email], #try-us input[type=password]{
 	width: 40%;
+	height: 30px;
 	float: left;
 }
 
-#try-us input[type="submit"] {
-	background: #FFFFFF;
+#try-us input[type=submit] {
+	background: #74AFAD;
+	color: #FFFFFF;
 	border: 1px solid #CCC;
 	padding: 10px 25px;
-	color: #333;
 	border-radius: 4px;
 }
 
 .section-box {
 	text-align: center;
-	background-color: #ECECEA;
 }
 .section-box section{
 	display: block;
 	display: inline-block;
 	width: 400px;
 	height: 500px;
-	border: solid;
+	border: solid #D9853B;
 	margin: 4px 4px;
 }
 
