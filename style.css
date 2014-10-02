@@ -24,6 +24,8 @@ header {
 }
 #logo {
 	padding-top: 11px;
+	height: 40px;
+	width:120px;
 }
 
 nav {
