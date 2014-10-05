@@ -25,27 +25,38 @@
 <div class="clear"></div>
 </nav>
 </header>
-<div class="container">
-<form action="register.php" method="post" class="" id="try-us">
-<p>Sign up as a <b>Fit-Tastic! member</b> and gain access to our facilities and classes - <b>all for FREE!</b></p>
-<label for="Name">
-	<span>Name: </span>
-	<input type="text" name="Name" id="Name">
-</label><br>
-<label for="Contact">
-	<span>Contact Number: </span>
-	<input type="text" name="Contact" id="Contact">
-</label><br>
-<label for="Email">
-	<span>E-mail: </span>
-	<input type="email" name="Email" id="Email">
-</label><br>
-<label for="Password">
-	<span>Password: </span>
-	<input type="password" name="Password" id="Password">
-</label><br>
-<input type="submit" class="button" value="Sign Up">
-</form>
+<div class = "container">
+<?php // register.php
+include "conn_f31s23.php";
+if (isset($_POST['submit'])) {
+	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
+		empty ($_POST['Contact']) || empty($_POST['Email'])) {
+	echo "All records should be filled in!";
+	exit;}
+	}
+
+//value check to be added!!!
+
+
+$Name     = $_POST['Name'];
+$Password = $_POST['Password'];
+$Contact  = $_POST['Contact'];
+$Email    = $_POST['Email'];
+
+$Password = md5($Password);
+
+$sql = "INSERT INTO FitTastic_Users (name, contact, password, email) 
+		VALUES ('$Name', '$Contact', '$Password', '$Email')";
+
+echo "<br>".$sql."<br>";
+$result = mysql_query($sql);
+
+if (!$result) 
+	echo "Your registration has failed due to unknown reason, please try again later.";
+else
+	echo "Welcome ". $username . ". You are now registered";
+?>
+
 </div>
 <footer>
 <div>
