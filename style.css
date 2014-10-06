@@ -23,9 +23,8 @@ header {
 	margin: 0 auto;
 }
 #logo {
-	padding-top: 11px;
-	height: 40px;
-	width:120px;
+	margin-top: -16px;
+	width: 80%;
 }
 
 nav {
