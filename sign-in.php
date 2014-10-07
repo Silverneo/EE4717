@@ -31,26 +31,47 @@
 </nav>
 </header>
 <div class="container">
-<form action="register.php" method="post" class="sign-form" id="try-us">
-<p>Sign up as a <b>Fit-Tastic! member</b> and gain access to our facilities and classes - <b>all for FREE!</b></p>
-<label for="Name">
-	<span>Name: </span>
-	<input type="text" name="Name" id="Name">
-</label><br>
-<label for="Contact">
-	<span>Contact Number: </span>
-	<input type="text" name="Contact" id="Contact">
-</label><br>
-<label for="Email">
-	<span>E-mail: </span>
-	<input type="email" name="Email" id="Email">
-</label><br>
-<label for="Password">
-	<span>Password: </span>
-	<input type="password" name="Password" id="Password">
-</label><br>
-<input type="submit" value="Sign Up">
-</form>
+<?php //sign-in.php
+
+session_start();
+
+if (isset($_POST['submit'])) {
+	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
+		empty ($_POST['Contact']) || empty($_POST['Email'])) {
+	echo "All records should be filled in!";
+	exit;}
+	}
+	
+$email = $_POST['Email'];
+$password = $_POST['Password'];
+
+$db_conn = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
+
+if (mysqli_connect_errno()) {
+echo 'Connection to database failed:'.mysqli_connect_error();
+exit();
+}
+
+$query = 'select * from FitTastic_Users '
+	   ."where email='$email'"
+	   ." and password='$password'";
+
+$result = $db_conn->query($query);
+if ($result->num_rows >0 )
+{
+	// if they are in the database register the user id
+	$_SESSION['valid_user'] = $userid;    
+	echo '<p>Log in Successfully, redirect to the home page...</P>';
+	header('Refresh: 2; URL = index.html');
+} 
+else 
+{
+	echo '<p>Cannot log you in, please try again...</p>';
+	header('Refresh: 2; URL = sign-in.html');
+}
+
+$db_conn->close();
+?>
 </div>
 <footer>
 <div>

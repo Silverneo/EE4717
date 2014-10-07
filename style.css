@@ -74,7 +74,7 @@ nav ul li a:hover {
 	height: auto;
 }
 
-#try-us {
+.sign-form {
 	display: inline-block;
 	margin: 50px auto;
 	max-width: 600px;
@@ -83,20 +83,20 @@ nav ul li a:hover {
 	font-size: 120%;
 }
 
-#try-us p {
+.sign-form p {
 	max-width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 25px;
 }
 
-#try-us label {
+.sign-form label {
 	display: block;
 	margin: 0px;
 	height: 30px;
 }
 
-#try-us label>span {
+.sign-form label>span {
 	width: 30%;
 	float: left;
 	text-align: right;
@@ -105,13 +105,13 @@ nav ul li a:hover {
 	line-height: 30px;
 }
 
-#try-us input[type=text], #try-us input[type=email], #try-us input[type=password]{
+.sign-form input[type=text], .sign-form input[type=email], .sign-form input[type=password]{
 	width: 40%;
 	height: 30px;
 	float: left;
 }
 
-#try-us input[type=submit] {
+.sign-form input[type=submit] {
 	background: #74AFAD;
 	color: #FFFFFF;
 	border: 1px solid #CCC;
