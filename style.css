@@ -62,11 +62,12 @@ nav ul li a:hover {
     clear: both;
 }
 
-.container {
+.content {
 	margin-top: 60px;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 80px;
 }
 
 #intro-photo{
@@ -136,7 +137,6 @@ footer {
 	display: block;
 	background-color: #74AFAD;
 	height: 80px;
-	
 	width: 100%;
     height: 100px;
     background-image: url(images/footer.png);
