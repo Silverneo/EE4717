@@ -1,13 +1,4 @@
-<!DOCYTYPE html>
-<html lang="en">
-<head>
-<title>Member Page</title>
-<meta charset="utf-8">
-<link rel="stylesheet" href="style.css">
-<script src="js/sign-in.js" type="text/javascript"></script>
-</head>
-<body>
-<?php
+<?php	//member information page
 
 session_start();
 var_dump($_SESSION);
@@ -24,8 +15,4 @@ else
 	echo '<p>Please sign in first...</p>';
 	header('Refresh: 2; URL = sign-in.html');	
 }
-
-
 ?>
-</body>
-</html>
