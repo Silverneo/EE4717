@@ -32,7 +32,7 @@ if ($result->num_rows > 0 )
 	// if they are in the database register the user id
 	$_SESSION['valid_user'] = $row['name'];  
 	echo '<p>Log in Successfully, redirect to the home page...</P>';
-	header('Refresh: 2; URL = index.php');
+	header('Refresh: 2; URL = index.html');
 } 
 else 
 {
