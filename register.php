@@ -20,7 +20,7 @@
 <li><a href="tryus.html">Try Us</a></li>
 </ul>
 <ul class="nav-right">
-<li><a href="login.html">Sign in</a></li>
+<li><a href="sign-in.html">Sign in</a></li>
 <li><a href="">Search(TBD)</a></li>
 </ul>
 <div class="clear"></div>

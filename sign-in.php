@@ -36,15 +36,16 @@
 
 session_start();
 
-if (isset($_POST['submit'])) {
-	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
-		empty ($_POST['Contact']) || empty($_POST['Email'])) {
+if (isset($_POST['Submit'])) {
+	if (empty ($_POST['Password']) || empty($_POST['Email'])) {
 	echo "All records should be filled in!";
 	exit;}
 	}
 	
 $email = $_POST['Email'];
 $password = $_POST['Password'];
+
+$password = md5($password);
 
 $db_conn = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
@@ -58,10 +59,12 @@ $query = 'select * from FitTastic_Users '
 	   ." and password='$password'";
 
 $result = $db_conn->query($query);
-if ($result->num_rows >0 )
+if ($result->num_rows > 0 )
 {
+    $row = $result->fetch_assoc();
+	//echo $row['name'];
 	// if they are in the database register the user id
-	$_SESSION['valid_user'] = $userid;    
+	$_SESSION['valid_user'] = $row['name'];  
 	echo '<p>Log in Successfully, redirect to the home page...</P>';
 	header('Refresh: 2; URL = index.html');
 } 
