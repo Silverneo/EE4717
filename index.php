@@ -13,7 +13,7 @@
 </div>
 <nav>
 <ul class="nav-left">
-<li><a href="index.html">Home</a></li>
+<li><a href="index.php">Home</a></li>
 <li><a href="facility.html">Facility</a></li>
 <li><a href="membership.html">Membership</a></li>
 <li><a href="gettinghere.html">Getting Here</a></li>
@@ -22,7 +22,7 @@
 <ul class="nav-right">
 <?php
 session_start();
-if (isset($_SESSION['valid_user'])
+if (isset($_SESSION['valid_user']))
 {
 	echo '<li><a href="member.php">'.$_SESSION['valid_user'].'</a></li>';
 	echo '<li><a href="sign-out.php">Sign Out</a></li>';
