@@ -8,7 +8,7 @@ session_destroy();
 if (!empty($old_user))
 {
 	// signed in already, sign out normally
-	echo '<p>Sign out successfully!'.$old_user.'</P>';
+	echo '<p>Sign out successfully! '.$old_user.'. See you next time:) </P>';
 	header('Refresh: 2; URL = index.html');
 }
 else

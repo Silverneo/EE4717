@@ -1,4 +1,6 @@
 <?php // member registration
+
+// sql server connection style is not good, use mysqli instead
 include "conn_f31s23.php";
 if (isset($_POST['submit'])) {
 	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
@@ -7,8 +9,7 @@ if (isset($_POST['submit'])) {
 	exit;}
 	}
 
-//value check to be added!!!
-
+// value check to be added!!!
 
 $Name     = $_POST['Name'];
 $Password = $_POST['Password'];

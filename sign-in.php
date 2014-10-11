@@ -30,7 +30,9 @@ if ($result->num_rows > 0 )
     $row = $result->fetch_assoc();
 	//echo $row['name'];
 	// if they are in the database register the user id
-	$_SESSION['valid_user'] = $row['name'];  
+	$_SESSION['valid_user'] = $row['name'];
+	$_SESSION['user_id'] = $row['user_id'];
+	
 	echo '<p>Log in Successfully, redirect to the home page...</P>';
 	header('Refresh: 2; URL = index.html');
 } 
