@@ -20,11 +20,21 @@ $Password = md5($Password);
 $sql = "INSERT INTO FitTastic_Users (name, contact, password, email) 
 		VALUES ('$Name', '$Contact', '$Password', '$Email')";
 
-echo "<br>".$sql."<br>";
+//echo "<br>".$sql."<br>";
 $result = mysql_query($sql);
 
 if (!$result) 
-	echo "Your registration has failed due to unknown reason, please try again later.";
+{
+	if (mysql_errno() == 1062)
+	{
+		echo "The email you enter has been registered, please try again!";
+	}
+	else
+		echo "Your registration has failed due to unknown reason, please try again later.";
+		//die('Invalid query: '.mysql_error());
+}
 else
+{
 	echo "Welcome ". $username . ". You are now registered";
+}
 ?>
