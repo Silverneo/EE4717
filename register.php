@@ -25,7 +25,7 @@ $result = mysql_query($sql);
 
 if (!$result) 
 {
-	if (mysql_errno() == 1062)
+	if (mysql_errno() == 1062)	//duplicate key
 	{
 		echo "The email you enter has been registered, please try again!";
 	}
@@ -35,6 +35,6 @@ if (!$result)
 }
 else
 {
-	echo "Welcome ". $username . ". You are now registered";
+	echo "Welcome ". $Name . ". You are now registered";
 }
 ?>
