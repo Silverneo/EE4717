@@ -3,8 +3,55 @@
 <head>
 <title>Fit-Tastic!</title>
 <meta charset="utf-8">
+<script src="js/jquery-1.11.1.js" type="text/javascript"></script>
 <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+$(document).ready(function() {
+
+	$('a.popup-window').click(function(){
+	
+		var popupBox = $(this).attr('href');
+		$(popupBox).fadeIn(400);
+		
+		var popMargTop = ($(popupBox).height() + 30) / 2;
+		var popMargLeft = ($(popupBox).width() + 30) / 2;
+	
+		$(popupBox).css({
+			"margin-top": -popMargTop,
+			"margin-left": -popMargLeft
+		});
+		
+		$('#sign-in-list').append('<div id="mask"></div>');
+		
+		$('#mask').fadeIn(400);
+		return false;
+		
+	});
+	
+	$(document).on("click", "button.close, #mask", function(){
+	
+		$('#mask, .popupInfo').fadeOut(400, function(){
+		
+			$('#mask').remove();
+			
+		});
+		return false;
+	});
+	
+});
+
+$(document).keyup(function(e){
+
+	if (e.keyCode == 27) {
+	
+		$('#mask, .popupInfo, #popup-box').fadeOut(400);
+		return false;
+	}
+});
+</script>
+
 <body>
 <div class="wrapper">
 <header>
@@ -29,7 +76,7 @@ if (isset($_SESSION['valid_user']))
 }
 else
 {
-	echo '<li><a href="sign-in.html">Sign in</a></li>';
+	echo '<li id="sign-in-list"><a href="#popup-box" class="popup-window">Sign In</a></li>';
 }
 ?>
 <li>
@@ -41,6 +88,23 @@ else
 </ul>
 <div class="clear"></div>
 </nav>
+<div id="popup-box" class="popupInfo">
+
+<form action="sign-in.php" method="post" class="sign-form" id="signInForm">
+<p><b>Sign In</b></p>
+<label for="Email">
+	<span>E-mail: </span>
+	<input type="email" name="Email" id="Email">
+</label><br>
+<label for="Password">
+	<span>Password: </span>
+	<input type="password" name="Password" id="Password">
+</label><br>
+<input type="submit" name="Submit" value="Sign In">
+<button type="button" class="close">close</button>
+</form>
+
+</div>
 </header>
 <div class="content">
 <div><img src="images/intro.jpg" alt="Fit-Tastic!" id="intro-photo"></div>
