@@ -96,6 +96,20 @@ nav ul li a:hover {
 
 
 
+.slider {
+
+	width: 1200px;
+	height: 500px;
+	overflow: hidden;
+	margin: 30px auto;
+}
+
+.slider img {
+
+	display: none;
+	
+}
+
 
 .content {
 	margin-top: 60px;
