@@ -7,6 +7,7 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	background-color: #ECECEA;
+	box-sizing: border-box;
 }
 header {
 	background-color: #74AFAD;
@@ -66,17 +67,16 @@ nav ul li a:hover {
 .popupInfo {
 	display: none;
 	padding: 15px;
-	border: 1px solid #1852fd;
-	background: #ECECEA;
+	width: 350px;
+	background: #ecf0f1;
 	float: left;
-	font-size: 1.2em;
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	z-index: 99999;
-	box-shadow: 0px 0px 3px #1852fd;
-	-moz-box-shadow: 0px 0px 3px #1852fd;
-	-webkit-box-shadow: 0px 0px 3px #1852fd;
+	box-shadow: 3px 3px 10px #333;
+	-moz-box-shadow: 3px 3px 10px #333;
+	-webkit-box-shadow: 3px 3px 10px #333;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -92,6 +92,64 @@ nav ul li a:hover {
 	width: 100%;
 	height: 100%;
 	opacity: 0.7;
+}
+
+.popupInfo h2 {
+	text-align: center;
+	font-weight: 200;
+	font-size: 1.5em;
+	margin-top: 10px;
+	color: #34495e;
+}
+
+.popupInfo form {
+	padding-top: 20px;
+}
+
+.popupInfo form input[type="email"], .popupInfo form input[type="password"] {
+
+	padding-left: 10px;
+	border: 1px solid #bbb;
+	font-size: 14px;
+}
+
+
+.popupInfo form input[type="email"], .popupInfo form input[type="password"],
+	.popupInfo form input[type="submit"], .popupInfo form button{
+	width: 80%;
+	margin-bottom: 25px;
+	height: 40px;
+	border-radius: 5px;
+	outline: 0;
+}
+
+.popupInfo form input[type="submit"], .popupInfo form button {
+	background: #e74c3c;
+	border: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 200;
+	cursor: pointer;
+	transition: box-shadow .4s ease;
+}
+
+.popupInfo form a {
+	text-align: center;
+	font-size: 10px;
+	color: #3498db;
+	padding-bottom: 10px;
+}
+
+.popupInfo:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  background: -moz-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  height: 5px;
+  border-radius: 5px 5px 0 0;
 }
 
 
@@ -188,7 +246,7 @@ footer {
 	height: 80px;
 	width: 100%;
     height: 100px;
-    background-image: url(images/footer.png);
+    background-image: url(../images/footer.png);
     background-size: 50% 100%;
 }
 footer ul {
