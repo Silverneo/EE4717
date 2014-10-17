@@ -9,13 +9,20 @@ body {
 	background-color: #ECECEA;
 	box-sizing: border-box;
 }
+
+.wrapper{
+	width: 1200px;
+	position: relative;
+	margin: 0 auto;
+}
+
 header {
 	background-color: #74AFAD;
 	color: #FFFFFF;
 	position: fixed;
 	top: 0;
 	height: 60px;
-	width: 100%;
+	width: 1200px;
 	z-index: 5;
 }
 #logo-box {
@@ -227,16 +234,18 @@ nav ul li a:hover {
 	border-radius: 4px;
 }
 
-.section-box {
-	text-align: center;
-}
-.section-box section{
-	display: block;
+.section-box section {
 	display: inline-block;
-	width: 400px;
-	height: 500px;
-	border: solid #D9853B;
-	margin: 4px 4px;
+	width: 45%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	border: 1px solid #bbb;
+}
+
+.section-box section img {
+	width: 100%;
 }
 
 footer {
