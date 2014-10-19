@@ -10,6 +10,12 @@ body {
 	box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: Century Gothic, sans-serif;
+
+}
+
+
 .wrapper{
 	width: 1150px;
 	position: relative;
@@ -39,7 +45,7 @@ nav {
 	font-family: Century Gothic, sans-serif;
 	color: #FFFFFF;
 	height: 30px;
-	margin: 15px;
+	margin: 10px 15px;
 }
 nav ul.nav-left {
 	float: left;
@@ -261,6 +267,33 @@ nav ul li a:hover {
 	width: 100%;
 }
 
+.col-3 {
+	display: inline-block;
+	width: 31%;
+	height: 500px;
+	vertical-align: top;
+	margin: 20px 10px;
+}
+
+.col-3 img {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.col-3 p {
+	text-align: justify;
+	margin: 20px auto;
+}
+
+.col-3 span {
+	margin: 10px;
+	font-family: Century Gothic, sans-serif;
+	color: #333333;
+	font-weight: 800;
+	font-size: 17px;
+}
 .flip {
 	position: absolute;
 	bottom: 0;
