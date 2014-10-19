@@ -305,7 +305,10 @@ nav ul li a:hover {
 	font-family: Century Gothic, sans-serif;
 }
 
-
+.flip a {
+	text-decoration: none;
+	color: white;
+}
 
 
 footer {
