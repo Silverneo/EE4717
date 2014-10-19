@@ -123,7 +123,7 @@ nav ul li a:hover {
 
 
 .popupInfo form input[type="email"], .popupInfo form input[type="password"],
-	.popupInfo form input[type="submit"], .popupInfo form button{
+	.popupInfo form input[type="submit"]{
 	width: 80%;
 	margin-bottom: 25px;
 	height: 40px;
@@ -131,7 +131,7 @@ nav ul li a:hover {
 	outline: 0;
 }
 
-.popupInfo form input[type="submit"], .popupInfo form button {
+.popupInfo form input[type="submit"]{
 	background: #e74c3c;
 	border: none;
 	color: white;
@@ -139,6 +139,18 @@ nav ul li a:hover {
 	font-weight: 200;
 	cursor: pointer;
 	transition: box-shadow .4s ease;
+}
+
+.popupInfo form button {
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	color: #e74c3c;
+	border-radius: 4px;
+	border: 1px;
+	padding: 4px 6px;
+	cursor: pointer;
+	font-size: 20px;
 }
 
 .popupInfo form a {
