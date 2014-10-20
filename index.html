@@ -7,51 +7,6 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
-
-<script>
-$(document).ready(function() {
-
-	$('a.popup-window').click(function(){
-	
-		var popupBox = $(this).attr('href');
-		$(popupBox).fadeIn(400);
-		
-		var popMargTop = ($(popupBox).height() + 30) / 2;
-		var popMargLeft = ($(popupBox).width() + 30) / 2;
-	
-		$(popupBox).css({
-			"margin-top": -popMargTop,
-			"margin-left": -popMargLeft
-		});
-		
-		$('#sign-in-list').append('<div id="mask"></div>');
-		
-		$('#mask').fadeIn(400);
-		return false;
-		
-	});
-	
-	$(document).on("click", "button.close, #mask", function(){
-	
-		$('#mask, .popupInfo').fadeOut(400, function(){
-		
-			$('#mask').remove();
-			
-		});
-		return false;
-	});
-	
-});
-
-$(document).keyup(function(e){
-
-	if (e.keyCode == 27) {
-	
-		$('#mask, .popupInfo, #popup-box').fadeOut(400);
-		return false;
-	}
-});
-</script>
 <body>
 <div class="wrapper">
 	<header>
@@ -99,6 +54,7 @@ $(document).keyup(function(e){
 				<a href="tryus.html">Don't have an account? Try us</a>
 			</form>
 		</div>
+		<script src="js/popup.js"></script>
 	</header>
 	<div class="content">
 		<span style="position: absolute; top: 180px; width: 350px; left: 800px; font-size: 50px;
@@ -123,25 +79,7 @@ $(document).keyup(function(e){
 				<img src="images/intro-membership.jpg">
 			</section>
 		</div>
-		<script>
-		$(document).ready(function(){
-
-			$(".slider #1").fadeIn(500);
-			var sc = $(".slider img").size();
-			var count = 1;
-			
-			setInterval(function() {
-			
-				$(".slider #" + count).fadeOut(500);
-				if (count == sc) {
-					count = 1;
-				}else{
-					count++;
-				}
-				$(".slider #" + count).delay(500).fadeIn(500);
-			}, 5000);
-		});
-		</script>
+		<script src="js/slider.js"></script>
 	</div>
 	<img style="margin-left: 12px" src="images/footer_man.png">
 	<footer>
