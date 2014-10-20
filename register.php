@@ -2,7 +2,7 @@
 
 // sql server connection style is not good, use mysqli instead
 include "conn_f31s23.php";
-if (isset($_POST['submit'])) {
+if (isset($_POST['Submit'])) {
 	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
 		empty ($_POST['Contact']) || empty($_POST['Email'])) {
 	echo "All records should be filled in!";

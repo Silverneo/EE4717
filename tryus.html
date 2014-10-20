@@ -101,24 +101,20 @@ $(document).keyup(function(e){
 		</div>
 	</header>
 	<div class="content">
+		<div style="width: 80%; text-align: center; margin-left: 10%; margin-top: 100px;">
+			<h1>Sign Up Now</h1>
+			<p style="margin: 20px auto;"><i class="fa fa-quote-left fa-border"></i>
+				Sign up as a <b>Fit-Tastic! member</b> and gain access to our facilities and classes - <b>all for FREE!</b>
+				<i class="fa fa-quote-right fa-border"></i>
+			</p>
+		</div>
 		<form action="register.php" method="post" class="sign-form" id="try-us">
-			<p>Sign up as a <b>Fit-Tastic! member</b> and gain access to our facilities and classes - <b>all for FREE!</b></p>
-			<label for="Name">
-				<span>Name: </span>
-				<input type="text" name="Name" id="Name">
-			</label><br>
-			<label for="Contact">
-				<span>Contact Number: </span>
-				<input type="text" name="Contact" id="Contact">
-			</label><br>
-			<label for="Email">
-				<span>E-mail: </span>
-				<input type="email" name="Email" id="Email">
-			</label><br>
-			<label for="Password">
-				<span>Password: </span>
-				<input type="password" name="Password" id="Password">
-			</label><br>
+
+			<input type="text" name="Name" id="Name" placeholder="Your name">
+			<input type="text" name="Contact" id="Contact" placeholder="Phone number">
+			<input type="email" name="Email" id="Email" placeholder="E-mail">
+			<input type="password" name="Password" id="Password" placeholder="Password">
+			<input type="password" name="Password2" id="Password2" placeholder="Confirm password">
 			<input type="submit" name="Submit" value="Sign Up">
 		</form>
 	</div>
