@@ -69,8 +69,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-	color: black;
-	background-color: white;
+	color: #D9411E;
 }
 
 .clear {
@@ -172,7 +171,7 @@ nav ul li a:hover {
   top: 0;
   left: 0;
   right: 0;
-  background: -webkit-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
+  background: -webkit-linear-gradient(left, #333333 0%, #333333 20%, #E05151 20%, #E05151 40%, #D9411E 40%, #D9411E 60%, #FFD452 60%, #FFD452 80%, #75A3D1 80%, #75A3D1 100%);
   background: -moz-linear-gradient(left, #27ae60 0%, #27ae60 20%, #8e44ad 20%, #8e44ad 40%, #3498db 40%, #3498db 60%, #e74c3c 60%, #e74c3c 80%, #f1c40f 80%, #f1c40f 100%);
   height: 5px;
   border-radius: 5px 5px 0 0;
