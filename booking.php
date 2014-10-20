@@ -2,8 +2,16 @@
 
 session_start();
 
+if (!isset($_SESSION['valid_user']))
+{
+	echo '<p>You are not signed in.</p>';
+	echo '<p>Please sign in first...</p>';
+	header('Refresh: 2; URL = facility-booking.html');	
+}
+else
+{
 # empty field check
-if (isset($_POST['submit'])) {
+if (isset($_POST['Submit'])) {
 	if (empty($_POST['facility']) || empty ($_POST['date']) || 
 		empty ($_POST['beg_time']) || empty($_POST['end_time'])) {
 	echo "All records should be filled in!";
@@ -78,11 +86,12 @@ else	// insert the booking information to database
 		}
 		else
 		{
-			echo "Something must be wrong right now, please try again later!";\
+			echo "Something must be wrong right now, please try again later!";
 			exit;
 		}
 	}
 }
 # close the database connection
 $mysqli->close();
+}
 ?>
