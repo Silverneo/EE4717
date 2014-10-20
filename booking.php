@@ -21,7 +21,7 @@ $end_time = $date.' '.$end_time;
 # start and end time check
 if ($beg_time >= $end_time)
 {
-	echo "The start time should be smaller thatn the end time, please reselect!";
+	echo "The start time should be smaller than the end time, please reselect!";
 	exit();
 }
 
@@ -31,7 +31,8 @@ $mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 # booking time slot validation
 
 # select violated time slot (improvement TODO)
-$query = "SELECT * FROM FitTastic_Reservations WHERE facility_id = '$facility' AND (beg_time < '$end_time' AND end_time > '$beg_time')";
+$query = "SELECT * FROM FitTastic_Reservations WHERE (facility_id = '$facility' "
+		."OR user_id = '".$_SESSION['user_id']."') AND (beg_time < '$end_time' AND end_time > '$beg_time')";
 
 $result = $mysqli->query($query);
 
@@ -56,8 +57,30 @@ else	// insert the booking information to database
 	}
 	else
 	{
-		echo "Your booking has been recorded by the system, an e-mail has been sent to you, thank you!";
 		# Email sending TODO
+		$query = "SELECT email, facility_name from FitTastic_Users, FitTastic_Facilities "
+				."WHERE FitTastic_Users.user_id = '".$_SESSION['user_id']."' AND FitTastic_Facilities.facility_id = '$facility'";
+		
+		$result = $mysqli->query($query);
+		
+		if($result->num_rows >= 1)
+		{
+			$row = $result->fetch_assoc();
+			$to      = $row['email'];
+			$subject = 'Booking reminder from FitTastic! Website';
+			$message = 'Dear '.$_SESSION['valid_user'].', you have booked '.$row['facility_name'].' from '.$beg_time.' to '.$end_time.'. Enjoy your exercising!';
+			$headers = 'From: f31s23@localhost' . "\r\n" .
+				'Reply-To: f31s23@localhost' . "\r\n" .
+				'X-Mailer: PHP/' . phpversion();
+
+			mail($to, $subject, $message, $headers,'-ff31s23@localhost');
+			echo "Your booking has been recorded by the system, an e-mail has been sent to you, thank you!";
+		}
+		else
+		{
+			echo "Something must be wrong right now, please try again later!";\
+			exit;
+		}
 	}
 }
 # close the database connection

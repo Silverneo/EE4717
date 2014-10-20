@@ -117,11 +117,10 @@ $(document).keyup(function(e){
 	if ($result)
 	{
 		// booking-form
-		echo '<form action="booking.php" method="post">';
+		echo '<form action="booking.php" method="post" class="booking">';
 		
 		// facility selection
 		echo '<select size="1" name="facility">';
-		echo '<option> facilities </option>';
 		while($row = $result->fetch_assoc())
 			echo '<option value="'.strval($row['facility_id']).'">'.$row['facility_name'].'</option>';
 		echo '</select>';
