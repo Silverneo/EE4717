@@ -4,6 +4,7 @@
 <title>Try Us</title>
 <meta charset="utf-8">
 <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="js/validate.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
@@ -91,7 +92,7 @@ $(document).keyup(function(e){
 		</nav>
 		<div id="popup-box" class="popupInfo">
 			<h2>Sign In</h2>
-			<form action="sign-in.php" method="post" id="signInForm">
+			<form action="sign-in.php" method="post" id="Sign-In">
 				<input type="email" placeholder="E-mail" name="Email" id="Email"><br>
 				<input type="password" placeholder="Password" name="Password" id="Password"><br>
 				<input type="submit" name="Submit" value="Sign In"><br>
@@ -108,13 +109,14 @@ $(document).keyup(function(e){
 				<i class="fa fa-quote-right fa-border"></i>
 			</p>
 		</div>
-		<form action="register.php" method="post" class="sign-form" id="try-us">
+		<form action="register.php" method="post" class="sign-form" id="Sign-Up">
 
 			<input type="text" name="Name" id="Name" placeholder="Your name">
 			<input type="text" name="Contact" id="Contact" placeholder="Phone number">
 			<input type="email" name="Email" id="Email" placeholder="E-mail">
 			<input type="password" name="Password" id="Password" placeholder="Password">
 			<input type="password" name="Password2" id="Password2" placeholder="Confirm password">
+			<br>
 			<input type="submit" name="Submit" value="Sign Up">
 		</form>
 	</div>

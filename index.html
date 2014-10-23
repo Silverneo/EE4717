@@ -4,6 +4,7 @@
 <title>Fit-Tastic!</title>
 <meta charset="utf-8">
 <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
+<script src="js/validate.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
@@ -46,9 +47,9 @@
 		</nav>
 		<div id="popup-box" class="popupInfo">
 			<h2>Sign In</h2>
-			<form action="sign-in.php" method="post" id="signInForm">
-				<input type="email" placeholder="E-mail" name="Email" id="Email"><br>
-				<input type="password" placeholder="Password" name="Password" id="Password"><br>
+			<form action="sign-in.php" method="post" id="Sign-In">
+				<input type="email" placeholder="E-mail" name="Email"><br>
+				<input type="password" placeholder="Password" name="Password"><br>
 				<input type="submit" name="Submit" value="Sign In"><br>
 				<button type="button" class="close"><i class="fa fa-close"></i></button><br>
 				<a href="tryus.html">Don't have an account? Try us</a>
