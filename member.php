@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['valid_user'])) {
+echo '<p>You are not signed in.</p>';
+echo '<p>Please sign in first...</p>';
+header('Refresh: 2; URL = index.php');
+} else { ?>
 <!DOCYTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +21,6 @@
 	<?php include 'header.php'; ?>
 	<div class="content">
 		<?php	//member information page
-
-		session_start();
-		var_dump($_SESSION);
-
-		if (isset($_SESSION['valid_user']))
-		{
 			echo '<p>Welcome '.$_SESSION['valid_user'].'!</p>';
 			$db_conn = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
@@ -50,23 +52,12 @@
 			{
 				echo '<p>You have not booked any facilities right now.</p>';
 			}
-			
-			
-			
-			
-			
-			
+
 			echo '<a href="sign-out.php">Sign Out</a>';	
-		}
-		else
-		{
-			echo '<p>You are not signed in.</p>';
-			echo '<p>Please sign in first...</p>';
-			header('Refresh: 2; URL = sign-in.html');	
-		}
 		?>
 	</div>
 	<?php include 'footer.php' ?>
 </div>
 </body>
 </html>
+<?php } ?>
