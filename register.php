@@ -1,7 +1,5 @@
 <?php // member registration
 
-// sql server connection style is not good, use mysqli instead
-include "conn_f31s23.php";
 if (isset($_POST['Submit'])) {
 	if (empty($_POST['Name']) || empty ($_POST['Password']) || 
 		empty ($_POST['Contact']) || empty($_POST['Email'])) {
@@ -16,17 +14,19 @@ $Password = $_POST['Password'];
 $Contact  = $_POST['Contact'];
 $Email    = $_POST['Email'];
 
+# connect to the database server
+$mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
+
 $Password = md5($Password);
 
-$sql = "INSERT INTO FitTastic_Users (name, contact, password, email) 
+$query = "INSERT INTO FitTastic_Users (name, contact, password, email) 
 		VALUES ('$Name', '$Contact', '$Password', '$Email')";
 
-//echo "<br>".$sql."<br>";
-$result = mysql_query($sql);
+$result = $mysqli->query($query);
 
 if (!$result) 
 {
-	if (mysql_errno() == 1062)	//duplicate key
+	if ($mysqli->errno == 1062)	//duplicate key
 	{
 		echo "The email you enter has been registered, please try again!";
 	}
