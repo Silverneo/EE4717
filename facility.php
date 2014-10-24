@@ -7,99 +7,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 </head>
-
-<script>
-$(document).ready(function() {
-
-	$('a.popup-window').click(function(){
-	
-		var popupBox = $(this).attr('href');
-		$(popupBox).fadeIn(400);
-		
-		var popMargTop = ($(popupBox).height() + 30) / 2;
-		var popMargLeft = ($(popupBox).width() + 30) / 2;
-	
-		$(popupBox).css({
-			"margin-top": -popMargTop,
-			"margin-left": -popMargLeft
-		});
-		
-		$('#sign-in-list').append('<div id="mask"></div>');
-		
-		$('#mask').fadeIn(400);
-		return false;
-		
-	});
-	
-	$(document).on("click", "button.close, #mask", function(){
-	
-		$('#mask, .popupInfo').fadeOut(400, function(){
-		
-			$('#mask').remove();
-			
-		});
-		return false;
-	});
-	
-});
-
-$(document).keyup(function(e){
-
-	if (e.keyCode == 27) {
-	
-		$('#mask, .popupInfo, #popup-box').fadeOut(400);
-		return false;
-	}
-});
-</script>
 <body>
 <div class="wrapper">
-	<header>
-		<div id="logo-box">
-		<img id="logo" src="images/logo.png">
-		</div>
-		<nav>
-			<ul class="nav-left">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="facility.html">Facility</a></li>
-				<li><a href="membership.html">Membership</a></li>
-				<li><a href="gettinghere.html">Getting Here</a></li>
-				<li><a href="tryus.html">Try Us</a></li>
-			</ul>
-			<ul class="nav-right">
-				<?php
-				session_start();
-				if (isset($_SESSION['valid_user']))
-				{
-					echo '<li><a href="member.php">'.$_SESSION['valid_user'].'</a></li>';
-					echo '<li><a href="sign-out.php">Sign Out</a></li>';
-				}
-				else
-				{
-					echo '<li id="sign-in-list"><a href="#popup-box" class="popup-window">Sign In</a></li>';
-				}
-				?>
-				<li>
-				<form id="search">
-				<input style="font-family: century gothic, sans-serif; width: 120px;border: 1px;
-					border-radius: 2px;padding-left: 5px;"type="text" placeholder="Search..." required>
-				<input type="button" value="Search">
-				</form>
-				</li>
-			</ul>
-		<div class="clear"></div>
-		</nav>
-		<div id="popup-box" class="popupInfo">
-			<h2>Sign In</h2>
-			<form action="sign-in.php" method="post" id="signInForm">
-				<input type="email" placeholder="E-mail" name="Email" id="Email"><br>
-				<input type="password" placeholder="Password" name="Password" id="Password"><br>
-				<input type="submit" name="Submit" value="Sign In"><br>
-				<button type="button" class="close"><i class="fa fa-close"></i></button><br>
-				<a href="tryus.html">Don't have an account? Try us</a>
-			</form>
-		</div>
-	</header>
+	<?php include 'header.php'; ?>
 	<div class="content">
 		<div style="width: 80%; text-align: center; margin-left: 10%; margin-top: 100px;">
 		<h1>Facilities</h1>
@@ -161,29 +71,14 @@ $(document).keyup(function(e){
 		</div>
 		<br>
 		<p>
-			<a href="facility-booking.html" style="border: 1px; border-radius: 3px; 
+			<a href="facility-booking.php" style="border: 1px; border-radius: 3px; 
 			padding: 10px; background: #FFD452; text-decoration: none; color: #333333">
 				<b>BOOK NOW!</b>
 			</a>
 		</p>
 		<br><br>
 	</div>
-	<img style="margin-left: 12px" src="images/footer_man.png">
-	<footer>
-		<ul>
-			<li>Contact Us</li>
-			<li>Membership</li>
-			<li>Sign up</li>
-		</ul>
-		<p style="float: left"><small>Copyright &copy; Fit-Tastic!</small></p>
-		<div class="clear"></div>
-		<ul id="footer-social">
-			<li><A href="http://www.facebook.com"><IMG src="images/facebook.jpg" alt="Facebook" id = "social-logo"></a></li>
-			<li><A href="http://www.twitter.com"><IMG src="images/Twitter.jpg" alt="Twitter" id = "social-logo"></a></li>
-			<li><A href="http://www.youtube.com"><IMG src="images/Youtube.jpg" alt="Youtube" id = "social-logo"></a></li>
-		</ul>
-		<div class="clear"></div>
-	</footer>
+	<?php include 'footer.php' ?>
 </div>
 </body>
 </html>
