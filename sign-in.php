@@ -32,14 +32,14 @@ if ($result->num_rows > 0 )
 	// if they are in the database register the user id
 	$_SESSION['valid_user'] = $row['name'];
 	$_SESSION['user_id'] = $row['user_id'];
-	
-	echo '<p>Log in Successfully, redirect to the home page...</P>';
-	header('Refresh: 2; URL = index.php');
+	echo "<p>Welcome ".$_SESSION['valid_user'].". Redirect to the previous page now...</P>";
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 } 
 else 
 {
-	echo '<p>Cannot log you in, please try again...</p>';
-	header('Refresh: 2; URL = sign-in.php');
+	echo '<p>Cannot log you in, redirect to the previous page now...</p>';
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
+	//header('Refresh: 2; URL = sign-in.php');
 }
 
 $db_conn->close();

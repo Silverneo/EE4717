@@ -8,13 +8,13 @@ session_destroy();
 if (!empty($old_user))
 {
 	// signed in already, sign out normally
-	echo '<p>Sign out successfully! '.$old_user.'. See you next time:) </P>';
-	header('Refresh: 2; URL = index.html');
+	echo "<p>Sign out successfully! ".$old_user.".\nSee you next time:) </P>";
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 else
 {
 	// come to this page unusually 
-	echo '<p>You have not signed in!</P>';
-	header('Refresh: 2; URL = index.html');
+	echo '<p>You have not signed in! Redirect to the previous page now...</P>';
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 ?>

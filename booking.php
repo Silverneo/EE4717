@@ -5,8 +5,8 @@ session_start();
 if (!isset($_SESSION['valid_user']))
 {
 	echo '<p>You are not signed in.</p>';
-	echo '<p>Please sign in first...</p>';
-	header('Refresh: 2; URL = facility-booking.php');	
+	echo '<p>Redirect to the previous page now...</p>';
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 else
 {
