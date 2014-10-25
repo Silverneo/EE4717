@@ -21,27 +21,27 @@
 		</div>
 		<div style="height: 900px;">
 			<div style="height: 280px; margin: 35px auto;">
-				<img style="float: left;" src="images/volleyball.jpg">				
-				<div style="margin-left: 410px">
+				<img style="display: inline-block; width: 35%; vertical-align: middle;" src="images/volleyball.jpg">
+				<div style="display: inline-block; width: 55%; vertical-align: middle; margin-left: 4%; margin-right: 4%;">
 					<h3>Volleyball</h3>
 					<br>
 					<p>Members can book volleyball facilities 7 days in advance. The facilities include:</p>
 					<br>
-					<ul style="text-align: left; margin-left: 90px; list-style: none;">
+					<ul style="text-align: left; margin-left: 35px; list-style: none;">
 						<li><i class="fa fa-check-square"></i> Full size volleyball court in main sports hall</li>
 						<li><i class="fa fa-check-square"></i> Full size court can be made in to two smaller courts for recreational use</li> 
 						<li><i class="fa fa-check-square"></i> Equipment available for hire<li>
 					</ul>
 				</div>
 			</div>
-			<div style="height: 280px; margin: 20px auto;">
-				<img style="float: left;" src="images/basketball.jpg">
-				<div style="margin-left: 410px">
+			<div style="height: 280px; margin: 35px auto;">
+				<img style="display: inline-block; width: 35%; vertical-align: middle;" src="images/basketball.jpg">
+				<div style="display: inline-block; width: 55%; vertical-align: middle; margin-left: 4%; margin-right: 4%;">
 					<h3>Basketball</h3>
 					<br>
 					<p>Members can book basketball facilities 7 days in advance. The facilities include:</p>
 					<br>
-					<ul style="text-align: left; margin-left: 90px; list-style: none;">	
+					<ul style="text-align: left; margin-left: 35px; list-style: none;">	
 						<li><i class="fa fa-check-square"></i> Roof-mounted retractable basketball hoops and back boards</li> 
 						<li><i class="fa fa-check-square"></i> Full size basketball court</li>
 						<li><i class="fa fa-check-square"></i> Cross-court basketball</li>
@@ -49,14 +49,14 @@
 					</ul>	
 				</div>
 			</div>			
-			<div style="height: 280px; margin: 20px auto;">
-				<img style="float: left;" src="images/netball.jpg">
-				<div style="margin-left: 410px">
+			<div style="height: 280px; margin: 35px auto;">
+				<img style="display: inline-block; width: 35%; vertical-align: middle;" src="images/netball.jpg">
+				<div style="display: inline-block; width: 55%; vertical-align: middle; margin-left: 4%; margin-right: 4%;">
 					<h3>Netball</h3>
 					<br>
 					<p>Members can book netball facilities 7 days in advance. The facilities include: </p>
 					<br>
-					<ul style="text-align: left; margin-left: 90px; list-style: none;">
+					<ul style="text-align: left; margin-left: 35px; list-style: none;">
 						<li><i class="fa fa-check-square"></i> Full size netball court in main sports hall</li>
 						<li><i class="fa fa-check-square"></i> Equipment available for hire</li>
 					</ul>

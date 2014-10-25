@@ -20,7 +20,7 @@
 	$open_time = 9;
 	$close_time = 22;
 
-	$query = "SELECT * FROM FitTastic_Facilities";
+	$query = "SELECT * FROM FitTastic_Facilities ORDER BY facility_name";
 
 	$result = $mysqli->query($query);
 

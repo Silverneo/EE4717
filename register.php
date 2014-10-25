@@ -36,8 +36,8 @@ if (!$result)
 }
 else
 {
-	echo "Welcome ". $Name . ". You are now registered";
-	echo "Please sign in now to enjoy our services!";
+	echo "Welcome ". $Name . ". You are now registered.\n";
+	echo "Please sign in now to enjoy our services!\n";
 	echo "Redirect to the previous page now...";
 	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }

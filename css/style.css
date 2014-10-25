@@ -305,6 +305,33 @@ nav ul li a:hover {
 }
 
 
+#member-page {
+	text-align: left;
+	margin-top: 100px;
+	margin-left: 20px;
+}
+
+#member-page p {
+	margin-top: 10px;
+}
+
+#member-page table {
+	border-color: #dddddd;
+	border-collapse: collapse;
+	width:600px;
+	border-spacing: 0;
+	margin-top: 10px;
+	text-align: center;
+}
+#member-page table tr {
+	height: 25px;
+}
+
+#member-page table tr:first-of-type {
+	font-weight: bold;
+	background-color: #d9edf7;
+}
+
 footer {
 	color: #333333;
 	font-family: century gothic, sans serif;
