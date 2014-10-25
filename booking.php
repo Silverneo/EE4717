@@ -82,12 +82,15 @@ else	// insert the booking information to database
 				'X-Mailer: PHP/' . phpversion();
 
 			mail($to, $subject, $message, $headers,'-ff31s23@localhost');
-			echo "Your booking has been recorded by the system, an e-mail has been sent to you, thank you!";
+			echo "Your booking has been recorded by the system, an e-mail has been sent to you, thank you!\n";
+			echo "Redirect to the previous page now...";
+			header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 		}
 		else
 		{
-			echo "Something must be wrong right now, please try again later!";
-			exit;
+			echo "Something must be wrong right now, please try again later!\n";
+			echo "Redirect to the previous page now...";
+			header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 		}
 	}
 }
