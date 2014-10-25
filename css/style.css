@@ -309,6 +309,7 @@ nav ul li a:hover {
 	text-align: left;
 	margin-top: 100px;
 	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 #member-page p {
@@ -330,6 +331,11 @@ nav ul li a:hover {
 #member-page table tr:first-of-type {
 	font-weight: bold;
 	background-color: #d9edf7;
+}
+
+#member-page a {
+	text-decoration: none;
+	color: #E05151;
 }
 
 footer {

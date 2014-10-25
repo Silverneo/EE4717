@@ -75,9 +75,9 @@ header('Refresh: 2; URL = index.php');
 						echo '<tr><td>'.$i.'</td><td>'.$row['facility_name'].'</td><td>'.$row['beg_time'].'</td><td>'.$row['end_time'].'</td>';
 						
 						if(strtotime($row['beg_time']) <= time()) {
-							echo '<td>expired</td></tr>';
+							echo "<td><i class=\"fa fa-clock-o\"></i> expired</td></tr>";
 						} else {
-							echo "<td><a href='".$_SEVER['PHP_SELF']."?cancel_id=".$row['reservation_id']."'>cancel</a></td></tr>";
+							echo "<td><a href='".$_SEVER['PHP_SELF']."?cancel_id=".$row['reservation_id']."'><i class=\"fa fa-trash\"></i> cancel</a></td></tr>";
 						}
 						$i = $i + 1;
 					}
