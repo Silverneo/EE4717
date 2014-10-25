@@ -20,11 +20,11 @@ header('Refresh: 2; URL = index.php');
 	$result = $db_conn->query($query);
 	
 	if(!$result)
-		echo "Your booking is not cancelled successfully, please try again later.\n";
+		echo "<p>Your booking is not cancelled successfully, please try again later.</p>";
 	else
-		echo "Your booking is cancelled successfully!\n";
+		echo "<p>Your booking is cancelled successfully!</p>";
 		
-	echo 'Redirect to the previous page now...';
+	echo '<p>Redirect to the previous page now...</p>';
 	header('Refresh: 2; URL = member.php');
 	$db_conn->close();
 	

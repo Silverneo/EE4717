@@ -28,17 +28,16 @@ if (!$result)
 {
 	if ($mysqli->errno == 1062)	//duplicate key
 	{
-		echo "The email you enter has been registered, please try again!";
+		echo "<p>The email you enter has been registered, please try again!</p>";
 	}
 	else
-		echo "Your registration has failed due to unknown reason, please try again later.";
-		//die('Invalid query: '.mysql_error());
+		echo "<p>Your registration has failed due to unknown reason, please try again later.</p>";
 }
 else
 {
-	echo "Welcome ". $Name . ". You are now registered.\n";
-	echo "Please sign in now to enjoy our services!\n";
-	echo "Redirect to the previous page now...";
+	echo "<p>Welcome ". $Name . ". You are now registered.</p>";
+	echo "<p>You can sign in now to enjoy our services!</p>";
+	echo "<p>Redirect to the previous page now...</p>";
 	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 ?>
