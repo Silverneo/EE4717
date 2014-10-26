@@ -39,6 +39,7 @@ header('Refresh: 2; URL = index.php');
 <script src="js/validate.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
 </head>
 <body>
 <div class="wrapper">
