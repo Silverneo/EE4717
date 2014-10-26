@@ -11,8 +11,14 @@
 <div class="wrapper">
 	<?php include 'header.php'; ?>
 	<div class="content">
-	<br>
-	<br>
+		<div style="width: 80%; text-align: center; margin-left: 10%; margin-top: 100px;">
+			<h1>Book Now</h1>
+			<p style="margin: 20px auto;"><i class="fa fa-quote-left fa-border"></i>
+				Make the booking below, your facility is just one step away! 
+				<i class="fa fa-quote-right fa-border"></i>
+			</p>
+		</div>
+	
 	<?php
 
 	$mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
@@ -68,6 +74,8 @@
 		}
 		echo '</select>';
 		
+		echo '<br>';
+		
 		echo '<span>To</span>';
 		echo '<select size="1" name="end_time">';
 		for ($hour = $open_time + 1; $hour < $close_time + 1; $hour++)
@@ -78,7 +86,7 @@
 		echo '</select>';
 		echo '<br>';
 		
-		echo '<input type="submit" name="Submit" value="book">';
+		echo '<input type="submit" name="Submit" value="Book Now">';
 		echo '</form>';
 	}
 

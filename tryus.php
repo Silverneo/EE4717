@@ -20,15 +20,19 @@
 			</p>
 		</div>
 		<form action="register.php" method="post" class="sign-form" id="Sign-Up">
-
 			<input type="text" name="Name" id="Name" placeholder="Your name">
+			<br>
 			<input type="text" name="Contact" id="Contact" placeholder="Phone number">
+			<br>
 			<input type="email" name="Email" id="Email" placeholder="E-mail">
+			<br>
 			<input type="password" name="Password" id="Password" placeholder="Password">
+			<br>
 			<input type="password" name="Password2" id="Password2" placeholder="Confirm password">
 			<br>
 			<input type="submit" name="Submit" value="Sign Up">
-		</form>
+			<br>
+			</form>	
 	</div>
 	<?php include 'footer.php' ?>
 </div>

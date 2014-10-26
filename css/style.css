@@ -32,13 +32,12 @@ header {
 	z-index: 5;
 }
 #logo-box {
-	height: 0px;
-	width: 180px;
+	height:0px;
+	width: 240px;
 	margin: 0 auto;
 }
 #logo {
-	margin-top: -16px;
-	width: 80%;
+	height:90px;
 }
 
 nav {
@@ -208,24 +207,26 @@ nav ul li a:hover {
 
 .sign-form {
 	display: inline-block;
-	margin: 50px auto;
-	width: 350px;
-	padding: 25px;
-	border: 1px solid #FFD452;
+	margin: auto;
+	width: 80%;
+	height: 290px;
+	background-image: url(../images/tryus.jpg);
+	padding: 10px;
+	/*border: 1px solid #FFD452;*/
 	font-size: 120%;
 	border-radius: 10px;
-	color: #333333;
 }
 
 .sign-form input[type=text], .sign-form input[type=email], .sign-form input[type=password], .sign-form select {
-	width: 60%;
+	width: 40%;
 	padding-left: 10px;
 	border: 1px solid #bbb;
 	font-size: 14px;
 	height: 35px;
 	border-radius: 5px;
-	margin: 10px auto;
+	margin: 5px auto;
 	outline: 0;
+	background-color: rgba(255,255,255,0.8);
 }
 
 .sign-form input[type=submit] {
@@ -234,16 +235,25 @@ nav ul li a:hover {
 	border: 1px;
 	padding: 10px 25px;
 	border-radius: 3px;
-	margin-top: 20px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 	cursor: pointer;
 }
 
 .sign-form span {
+	margin-left: -130px;
 	display:inline-block;
 	width: 20%;
+	color: #D9411E;
 	font-size: 16px;
+	font-weight: bold;
 	text-align: right;
 	padding-right: 10px;
+}
+
+.sign-form select {
+	color: #333333;
+	margin-bottom: 10px;
 }
 
 .section-box section {
@@ -343,13 +353,13 @@ footer {
 	font-family: century gothic, sans serif;
 	font-size: 90%;
 	display: block;
-	background-color: white;
+	/*background-color: white;*/
 	width: 100%;
     height: 70px;
-    /*background-image: url(../images/footer_man.png);*/
+    background-image: url(../images/footer.png);
     background-size: 100%;
 	border-top: 2px solid #333333;
-	border-bottom: 10px solid #333333;
+	border-bottom: 18px solid #333333;
 }
 footer ul {
 	float: right;
