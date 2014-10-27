@@ -30,7 +30,8 @@ $end_time = $date.' '.$end_time;
 if ($beg_time >= $end_time)
 {
 	echo "The start time should be smaller than the end time, please reselect!";
-	exit();
+	echo '<p>Redirect to the previous page now...</p>';
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 
 # connect to the database server
@@ -46,10 +47,12 @@ $result = $mysqli->query($query);
 
 if ($result->num_rows > 0)	// violated time slot exists
 {
-	echo "The facility you choose has been booked from <br>";
+	echo "The facility/timeslot you chose has been booked from <br>";
 	while($row = $result->fetch_assoc())
 		echo $row['beg_time']." to ".$row['end_time']."<br>";
 	echo "Please choose another time slot :)";
+	echo '<p>Redirect to the previous page now...</p>';
+	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 else	// insert the booking information to database
 {

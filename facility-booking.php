@@ -34,6 +34,7 @@
 	if ($result)
 	{
 		// booking-form
+		echo '<div class="form-back">';
 		echo '<form action="booking.php" method="post" class="sign-form">';
 		
 		// facility selection
@@ -89,6 +90,7 @@
 		
 		echo '<input type="submit" name="Submit" value="Book Now">';
 		echo '</form>';
+		echo '</div>';
 	}
 
 	$mysqli->close();
