@@ -1,15 +1,17 @@
 <img style="margin-left: 12px" src="images/footer_man.png">
 <footer>
 	<ul>
-		<li><a href="membership.php">Membership</a></li>
-		<li><a href="tryus.php">Try Us</a></li>
-	</ul>	
-	<div class="clear"></div>
-	<ul id="footer-social">
-		<li><A href="http://www.facebook.com"><IMG src="images/facebook.jpg" alt="Facebook" id = "social-logo"></a></li>
-		<li><A href="http://www.twitter.com"><IMG src="images/Twitter.jpg" alt="Twitter" id = "social-logo"></a></li>
-		<li><A href="http://www.youtube.com"><IMG src="images/Youtube.jpg" alt="Youtube" id = "social-logo"></a></li>
+		<li>Play Center L3-121, 678 Dream Road</li>
+		<li>Singapore 654321</li>
+	</ul>
+	<ul>
+		<li>Opening Hours: 09:00 - 22:00 (Monday to Sunday)</li>
+		<li>Contact number: +65 6666 8888</li>
 	</ul>
 	<div class="clear"></div>
-	<p style="float: left; color: #ECECEA"><small>Copyright &copy; Fit-Tastic!</small></p>
+	<div style="float: right;"id="footer-social">
+		<i class="fa fa-facebook-square fa-2x"></i><i class="fa fa-twitter-square fa-2x"></i><i class="fa fa-youtube fa-2x"></i></li>
+	</div>
+	<div class="clear"></div>
+	<p style="position: absolute;bottom: 3px; left: 10px; color: #ECECEA"><small>Copyright &copy; Fit-Tastic!</small></p>
 </footer>

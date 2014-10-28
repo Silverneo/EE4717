@@ -46,9 +46,9 @@ header('Refresh: 2; URL = index.php');
 	<?php include 'header.php'; ?>
 	<div class="content">
 		<div id="member-page">
-			<h2>
-				<?php echo $_SESSION['valid_user']; ?>
-			</h2>
+			<h1>
+				<?php echo 'Hi! ' .$_SESSION['valid_user']; ?>
+			</h1>
 			<?php	//member information page
 				$db_conn = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
@@ -68,9 +68,12 @@ header('Refresh: 2; URL = index.php');
 				if ($result->num_rows > 0 )
 				{
 					$i = 1;
-					echo '<p>Your booking history</p>';
+					echo '<p style="margin: 20px auto;">';
+					echo "<i class=\"fa fa-quote-left pull-left fa-border\"></i> Your booking, our care! The table below shows your booking history,
+							if you encounter any problem, please don't hesitate to give us a call.<i class=\"fa fa-quote-right pull-right fa-border\"></i>";
+					echo '</p>';
 					echo '<table border="1">';
-					echo '<tr><td>No.</td><td>Facility</td><td>Start</td><td>End</td><td>Status</td></tr>';
+					echo '<tr><td>No.</td><td>Facility</td><td>Start Time</td><td>End Time</td><td>Status</td></tr>';
 					while ($row = $result->fetch_assoc())
 					{
 						echo '<tr><td>'.$i.'</td><td>'.$row['facility_name'].'</td><td>'.$row['beg_time'].'</td><td>'.$row['end_time'].'</td>';
@@ -86,7 +89,7 @@ header('Refresh: 2; URL = index.php');
 				}
 				else
 				{
-					echo '<p>You have not booked any facilities right now.</p>';
+					echo '<p>Oops! You have not booked any facilities yet.</p>';					
 				}
 			?>
 		</div>

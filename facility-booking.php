@@ -1,7 +1,7 @@
 <!DOCYTYPE html>
 <html lang="en">
 <head>
-<title>Booking</title>
+<title>Book Now</title>
 <meta charset="utf-8">
 <script src="js/jquery-1.11.1.js" type="text/javascript"></script>
 <link rel="stylesheet" href="css/style.css">

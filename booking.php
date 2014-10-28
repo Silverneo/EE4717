@@ -29,9 +29,16 @@ $end_time = $date.' '.$end_time;
 # start and end time check
 if ($beg_time >= $end_time)
 {
-	echo "The start time should be smaller than the end time, please reselect!";
-	echo '<p>Redirect to the previous page now...</p>';
-	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
+	echo "<p>The start time should be smaller than the end time, please reselect!</p>";
+	echo '<a href="facility-booking.php">go back</a>';
+	exit();
+}
+
+if (strtotime("$beg_time + 4 hours") < strtotime($end_time))
+{
+	echo "<p>You can book up to 4 hours for one facility each time. Please reselect your booking time.</p>";
+	echo '<a href="facility-booking.php">go back</a>';
+	exit();
 }
 
 # connect to the database server
@@ -47,12 +54,11 @@ $result = $mysqli->query($query);
 
 if ($result->num_rows > 0)	// violated time slot exists
 {
-	echo "The facility/timeslot you chose has been booked from <br>";
+	echo "<p>The facility/timeslot you chose has been booked from</p>";
 	while($row = $result->fetch_assoc())
 		echo $row['beg_time']." to ".$row['end_time']."<br>";
-	echo "Please choose another time slot :)";
-	echo '<p>Redirect to the previous page now...</p>';
-	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
+	echo "<p>Please choose another time slot :)</p>";
+	echo '<a href="facility-booking.php">go back</a>';
 }
 else	// insert the booking information to database
 {

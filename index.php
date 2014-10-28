@@ -24,7 +24,7 @@
 			<img id="4" src="images/slider4.jpg" border="0" alt ="Fit-Tastic!">
 			<img id="5" src="images/slider5.jpg" border="0" alt ="Fit-Tastic!">
 		</div>
-		<h1><i class="fa fa-heart-o"></i>UR CLUBS</h1>
+		<h1><i class="fa fa-heart-o"></i>UR CLUB</h1>
 		<div class="section-box">
 			<section>
 				<span class="flip"><a href="facility.php"><i class="fa fa-arrow-circle-right"></i> Facility</a></span>
