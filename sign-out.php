@@ -14,7 +14,7 @@ if (!empty($old_user))
 else
 {
 	// come to this page unusually 
-	echo '<p>You have not signed in! Redirect to the previous page now...</P>';
-	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
+	echo '<p>You have not signed in! Redirect to the home page now...</P>';
+	header('Refresh: 2; URL = index.php');
 }
 ?>
