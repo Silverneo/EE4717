@@ -13,23 +13,22 @@ $password = $_POST['Password'];
 
 $password = md5($password);
 
-$db_conn = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
+$mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
-if (mysqli_connect_errno()) {
-echo 'Connection to database failed:'.mysqli_connect_error();
-exit();
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
 }
 
 $query = 'select * from FitTastic_Users '
 	   ."where email='$email'"
 	   ." and password='$password'";
 
-$result = $db_conn->query($query);
+$result = $mysqli->query($query);
 if ($result->num_rows > 0 )
 {
     $row = $result->fetch_assoc();
-	//echo $row['name'];
-	// if they are in the database register the user id
+
 	$_SESSION['valid_user'] = $row['name'];
 	$_SESSION['user_id'] = $row['user_id'];
 	echo "<p>Welcome ".$_SESSION['valid_user'].". Redirect to the previous page now...</p>";
@@ -41,5 +40,5 @@ else
 	header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 }
 
-$db_conn->close();
+$mysqli->close();
 ?>

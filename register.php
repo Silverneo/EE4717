@@ -17,6 +17,11 @@ $Email    = $_POST['Email'];
 # connect to the database server
 $mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
+}
+
 $Password = md5($Password);
 
 $query = "INSERT INTO FitTastic_Users (name, contact, password, email) 
@@ -29,6 +34,8 @@ if (!$result)
 	if ($mysqli->errno == 1062)	//duplicate key
 	{
 		echo "<p>The email you enter has been registered, please try again!</p>";
+		echo "<p>Redirect to the previous page now...</p>";
+		header('Refresh: 2; URL = ' . $_SERVER['HTTP_REFERER']);
 	}
 	else
 		echo "<p>Your registration has failed due to unknown reason, please try again later.</p>";

@@ -44,9 +44,15 @@ if (strtotime("$beg_time + 4 hours") < strtotime($end_time))
 # connect to the database server
 $mysqli = new mysqli('localhost', 'f31s23', 'f31s23', 'f31s23');
 
+if (mysqli_connect_errno($mysqli)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+	exit();
+}
+
 # booking time slot validation
 
-# select violated time slot (improvement TODO)
+# select violated time slot
+
 $query = "SELECT * FROM FitTastic_Reservations WHERE (facility_id = '$facility' "
 		."OR user_id = '".$_SESSION['user_id']."') AND (beg_time < '$end_time' AND end_time > '$beg_time')";
 
@@ -57,6 +63,7 @@ if ($result->num_rows > 0)	// violated time slot exists
 	echo "<p>The facility/timeslot you chose has been booked from</p>";
 	while($row = $result->fetch_assoc())
 		echo $row['beg_time']." to ".$row['end_time']."<br>";
+
 	echo "<p>Please choose another time slot :)</p>";
 	echo '<a href="facility-booking.php">go back</a>';
 }
