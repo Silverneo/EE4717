@@ -12,7 +12,7 @@
 		<ul class="nav-right">
 			<?php
 			session_start();
-			if (isset($_SESSION['valid_user']))
+			if (isset($_SESSION['valid_user']) && isset($_SESSION['user_id']))
 			{
 				echo '<li><a href="member.php">'.$_SESSION['valid_user'].'</a></li>';
 				echo '<li><a href="sign-out.php"><i class="fa fa-sign-out"></i> Sign Out</a></li>';
