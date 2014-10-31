@@ -10,8 +10,12 @@
 	</ul>
 	<div class="clear"></div>
 	<div style="float: right;"id="footer-social">
-		<i class="fa fa-facebook-square fa-2x"></i><i class="fa fa-twitter-square fa-2x"></i><i class="fa fa-youtube fa-2x"></i></li>
+		<i class="fa fa-facebook-square fa-2x"></i>
+		<i class="fa fa-twitter-square fa-2x"></i>
+		<i class="fa fa-youtube fa-2x"></i></li>
 	</div>
 	<div class="clear"></div>
-	<p style="position: absolute;bottom: 3px; left: 10px; color: #ECECEA"><small>Copyright &copy; Fit-Tastic!</small></p>
+	<p style="position: absolute;bottom: 3px; left: 10px; color: #ECECEA">
+		<small>Copyright &copy; Fit-Tastic!</small>
+	</p>
 </footer>

@@ -14,7 +14,8 @@
 	<?php include 'header.php'; ?>
 	<div class="content">
 		<span style="position: absolute; top: 180px; width: 350px; left: 800px; font-size: 50px;
-			z-index: 1; font-weight: 600; font-family: century gothic; color: white; background: rgba(51, 51, 51, 0.3); border-radius: 10px;">
+			z-index: 1; font-weight: 600; font-family: century gothic; color: white;
+			background: rgba(51, 51, 51, 0.3); border-radius: 10px;">
 			Keep fit and be Fit-Tastic!
 		</span>
 		<div class="slider">
